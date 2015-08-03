@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   	android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+   	>
+	
+	<RelativeLayout
+   	android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	    <TextView
+	        android:id="@+id/city"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_above="@+id/imageView1"
+	        android:gravity="center|top"
+	        android:text="@+string/city" 
+	        android:textSize="32sp"/>
+	    
+	    <ImageView
+	        android:id="@+id/imageView1"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true"
+	        android:layout_width="100dp"
+    		android:layout_height="100dp"
+	        android:src="@drawable/sun" />
+	
+	    <TextView
+	        android:id="@+id/temperature"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:gravity="center|top"
+	        android:layout_below="@+id/imageView1"
+	        android:text="@string/temperature" 
+	        android:textSize="32sp"/>
+		
+	    <Button
+	        android:id="@+id/refreshButton"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:onClick="getWeather"
+	        android:text="@+string/refresh" />
+    </RelativeLayout>
+    
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+         >
+    </ProgressBar>
+</RelativeLayout>
